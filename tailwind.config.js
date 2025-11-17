@@ -6,6 +6,16 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        brand: {
+          primary: '#6AA9FF',
+          sky: '#6AA9FF',
+          offwhite: '#F8F9FA',
+          beige: '#E3DCC2',
+          sand: '#D9C7A3',
+          ink: '#0f172a',
+        },
+      },
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
         geist: ['Geist', 'system-ui', 'sans-serif'],
@@ -20,7 +30,8 @@ export default {
         'slide-in': 'slideIn 0.3s ease-out',
         'slide-up': 'slideUp 0.3s ease-out',
         'bounce-in': 'bounceIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55)',
-        'spin-slow': 'spin 3s linear infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'pulse-soft': 'pulseSoft 3s ease-in-out infinite',
       },
       keyframes: {
         fadeIn: {
@@ -44,6 +55,14 @@ export default {
           '50%': { transform: 'scale(1.05)' },
           '70%': { transform: 'scale(0.9)' },
           '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-8px)' },
+        },
+        pulseSoft: {
+          '0%, 100%': { boxShadow: '0 0 0 0 rgba(106,169,255,0.3)' },
+          '50%': { boxShadow: '0 0 0 12px rgba(106,169,255,0)' },
         },
       },
     },
